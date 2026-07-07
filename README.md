@@ -2,6 +2,10 @@
 
 Scripts for uploading visit info to umami extracted from haproxy logs.
 
+## Prerequisites
+
+You will need python with requests installed.
+
 ## Configuration
 
 Create `config.json` based on `config.json.example`.
@@ -24,7 +28,7 @@ This example matches the part of a haproxy log that looks like this:
 ```
 {referrer|host|user-agent}
 ```
-In the example, the referrer can be one of multiple different URLs and host is the domain name of the umami instance
+In the example, the referrer can be one of multiple different URLs and host is the domain name of the umami instance.
 
 ## Running
 
