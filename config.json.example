@@ -1,0 +1,7 @@
+{
+    "logfile": "path/to/your/logfile",
+    "website_ids": {
+        "https://example.org": ""
+    },
+    "base": "http://localhost:3000"
+}
