@@ -8,7 +8,7 @@ with open("config.json") as configfile:
     config = json.load(configfile)
 
 website_ids = config["website_ids"]
-umamiBase = config["umamiBase"]
+umamiBase = config["umamiBaseUrl"]
 
 with open(config["logfile"]) as f:
     reader = csv.DictReader(f,["website", "userAgent", "timestamp", "ip"], delimiter='\t')
@@ -20,10 +20,10 @@ with open(config["logfile"]) as f:
         useragent = line["userAgent"]
         line.pop("userAgent")
          
-        print(line)
+        print(f"Uploading: {line}")
 
         result = requests.post(umamiBase + "/api/send/", 
                       headers={'Content-Type': 'application/json',
                                 'User-Agent':useragent},
                       json={"type": "event", "payload": line})
-        print(result.content)
+        print(f"Result: {result.status_code}")
