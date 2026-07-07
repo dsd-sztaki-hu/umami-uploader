@@ -3,5 +3,5 @@
     "website_ids": {
         "https://example.org": ""
     },
-    "base": "http://localhost:3000"
+    "umamiBase": "http://localhost:3000"
 }
